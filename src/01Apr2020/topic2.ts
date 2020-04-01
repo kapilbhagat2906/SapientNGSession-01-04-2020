@@ -29,7 +29,7 @@ function Entity (customerInfo: CustomerInfoModel) {
         Object.defineProperty(_constructor.prototype, 'id', {
             value: customerInfo.id
         });
-        console.log('Customer Details Saved');
+        console.log('Entity decorator called');
     }
 }
 
@@ -41,10 +41,12 @@ class Customer {
         this.balance = initialBalance;
     }
 
+    @Logger()
     deposit(amount: number): void {
         this.balance += amount;
     }
 
+    @Logger()
     withDraw(amount: number): void {
         this.balance -= amount;
     }
@@ -60,6 +62,7 @@ class Customer {
         }
     }
 
+    @Logger()
     getBalance(): string {
         return `Remaining Balance for ${(this as any).name} (${(this as any).id}) is ${this.balance}`;
     }
