@@ -1,0 +1,15 @@
+{
+  "name": "ng-session",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc",
+    "play": "tsc && node build/topic1.js && node build/topic2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
